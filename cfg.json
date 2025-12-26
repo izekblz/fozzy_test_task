@@ -1,0 +1,36 @@
+{
+  "users_path": "./data/original/Users.csv",
+  "stores_path": "./data/original/stores.csv",
+  "kyiv_geojson_path": "./data/external/map.json",
+  "population_csv_path": "./data/external/ukr_pd_2020_1km_ASCII_XYZ.csv",
+  "competitors_src": "./data/external/overpass_supermarkets.geojson",
+  "stops_src_aboveground": "https://data.gov.ua/dataset/5070cf9f-2934-49d0-be37-ec82dfa8425d/resource/7063f59c-f625-48e1-9603-7c9b50d54db0/download/31725604_stops_2025-11-11.json",
+  "metro_exits_src": "https://gisserver-stage.kyivcity.gov.ua/mayno/rest/services/KYIV_API/transport_public/MapServer/3/query?where=1%3D1&text=&objectIds=&time=&timeRelation=esriTimeRelationOverlaps&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&sqlFormat=none&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&uniqueIds=&returnUniqueIdsOnly=false&featureEncoding=esriDefault&f=geojson",
+  "parking_src": "https://gisserver.kyivcity.gov.ua/mayno/rest/services/parking/Parking_ADM_INSP/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=pjson",
+  "transit_type_weights": {
+    "metro_exit": 4.0,
+    "metro": 3.0,
+    "other": 1.0
+  },
+  "brand_exclusion_names": ["Сільпо", "Silpo"],
+  "brand_exclusion_radius_m": 500,
+  "decay_lambda_km": 0.7,
+  "decay_radius_km": 1.5,
+  "k_candidates": [5,10,15,20,25,30,35,40,45,50,
+  55,60,65,70,75,80,85,90,95,100],
+  "radii_m_transit": [100,250,500],
+  "weights_radii_transit": [0.5, 0.3, 0.2],
+  "radii_m_parking": [100,200,300],
+  "weights_radii_parking": [0.34, 0.33, 0.33],
+  "radii_m_competitors": [500,1000,1500],
+  "weights_radii_competitors": [0.5, 0.3, 0.2],
+  "radii_m_stores": [500,1000,1500],
+  "default_weights": {
+    "demand_blended": 0.5,
+    "parking_capacity_norm": 0.05,
+    "transit_weighted_norm": 0.2,
+    "competition_score": 0.2,
+    "whitespace_norm": 0.05
+  },
+  "top_n": 15
+}

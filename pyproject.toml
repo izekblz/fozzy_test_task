@@ -1,0 +1,14 @@
+[project]
+name = "fozzy-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
+    "pyproj>=3.7.2",
+    "regex>=2025.11.3",
+    "requests>=2.32.5",
+    "shapely>=2.1.2",
+]
